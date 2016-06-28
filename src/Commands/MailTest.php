@@ -13,7 +13,7 @@ class MailTest extends Command
      *
      * @var string
      */
-    protected $signature = 'mail:test {email} {subject?} {body?}';
+    protected $signature = 'mail:test {email} {subject} {body}';
 
     /**
      * The console command description.
@@ -39,8 +39,8 @@ class MailTest extends Command
     public function handle()
     {
         $email = $this->argument('email');
-        $subject = $this->argument('subject', 'Test');
-        $body = $this->argument('body', 'Test');
+        $subject = $this->argument('subject');
+        $body = $this->argument('body');
         
         try {
             $this->emailTester->send($email, $subject, $body);
