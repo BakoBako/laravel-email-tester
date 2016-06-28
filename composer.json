@@ -1,6 +1,6 @@
 {
     "name": "bako/laravel-email-tester",
-    "type": "laravel_email-tester",
+    "type": "library",
     "description": "Send test emails from artisan command",
     "keywords": ["laravel", "email", "tester"],
     "license": "MIT",
