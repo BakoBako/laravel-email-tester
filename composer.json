@@ -1,0 +1,21 @@
+{
+    "name": "bako/laravel-email-tester",
+    "type": "laravel_email-tester",
+    "description": "Send test emails from artisan command",
+    "keywords": ["laravel", "email", "tester"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksandar Bako Markovski",
+            "email": "aleksandar.markovski_bako@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bako\\Laravel\\EmailTester\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.5"
+    }    
+}
