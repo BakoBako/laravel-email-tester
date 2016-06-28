@@ -2,7 +2,7 @@
 
 namespace Bako\Laravel\MailTester;
 
-use Bako\Laravel\MailTester\Services\SendTestMail;
+use Bako\Laravel\MailTester\Commands\MailTest;
 use Illuminate\Support\ServiceProvider;
 
 class MailTesterProvider extends ServiceProvider
@@ -19,6 +19,6 @@ class MailTesterProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands(SendTestMail::class);
+        $this->commands(MailTest::class);
     }
 }

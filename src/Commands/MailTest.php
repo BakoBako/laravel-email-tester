@@ -2,8 +2,8 @@
 
 namespace Bako\Laravel\MailTester\Commands;
 
-use GSix\Core\Testing\Services\SendTestMail;
-use GSix\Core\Exceptions\MailTestFailedException;
+use Bako\Laravel\MailTester\Services\SendTestMail;
+use Bako\Laravel\MailTester\Exceptions\MailTestFailedException;
 use Illuminate\Console\Command;
 
 class MailTest extends Command
@@ -13,7 +13,7 @@ class MailTest extends Command
      *
      * @var string
      */
-    protected $signature = 'email:test {email} {subject?} {body?}';
+    protected $signature = 'mail:test {email} {subject?} {body?}';
 
     /**
      * The console command description.
