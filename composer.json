@@ -3,6 +3,7 @@
     "type": "library",
     "description": "Send test emails from artisan command",
     "keywords": ["laravel", "email", "tester"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Aleksandar Bako Markovski",
