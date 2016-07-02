@@ -13,7 +13,12 @@ class MailTest extends Command
      *
      * @var string
      */
-    protected $signature = 'mail:test {email} {subject} {body}';
+    protected $signature = 'mail:test 
+                                {email : Email address to be sent to} 
+                                {--S|subject=Test : Email address subject} 
+                                {--B|body=Test : Email address body} 
+                                {--Q|queue : Whether the send of email should be via queue}
+                                {--view= : Test email from view}';
 
     /**
      * The console command description.
@@ -39,11 +44,13 @@ class MailTest extends Command
     public function handle()
     {
         $email = $this->argument('email');
-        $subject = $this->argument('subject');
-        $body = $this->argument('body');
+        $subject = $this->option('subject');
+        $body = $this->option('body');
+        $queue = $this->option('queue');
+        $view = $this->option('view') ?: [] ;
         
         try {
-            $this->emailTester->send($email, $subject, $body);
+            $this->emailTester->send($email, $subject, $body, $queue, $view);
             
             $this->info('Test email is succesfully sent. Please check your inbox or spam folder.');
         } catch (MailTestFailedException $exception) {
